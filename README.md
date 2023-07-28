@@ -1,1 +1,39 @@
-# ML_Project
+create table transactions(tran_key varchar(50) primary key, book_key varchar(50),member_key varchar(50),t_type varchar(50),dat date);
+create table book(book_id varchar(50) primary key,title varchar(50), author varchar(50), publication_year year );
+create table members(mem_id varchar(50) primary key, mem_name varchar(50),addr varchar(500),mem_type varchar(50),m_date date);
+create table purchase(purchase_id varchar(50) primary key, book varchar(50),mem_id varchar(50),trans_type varchar(50),pur_date date);
+create table book_det(pub_id varchar(50) primary key,pub_name varchar(50),lang varchar(50),genre varchar(50));
+create table mem_add(flat varchar(40),bldg varchar(50),district varchar(40),city varchar(50));
+use lib;
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('1', 'Harry potter', 'J.K Rowling', 1997);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('2', 'c language', 'OXFORD', 2001);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('3', 'Murder', 'Yashwant', 2003);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('4', 'Flash', 'Aditya', 2004);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('5', 'Lucifer', 'Rishi', 2005);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('6', 'Oppenheimer', 'Sravan', 1999);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('7', 'A relaxing vacation', 'Elizabeth', 2010);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('8', 'A ray of hope', 'Jack', 2006);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('9', 'JAVA', 'Benji', 2007);
+INSERT INTO `lib`.`book` (`book_id`, `title`, `author`, `publication_year`) VALUES ('10', 'C#', 'Ben', 2002);
+
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('1', 'JK', 'English', 'Fantasy');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('2', 'ICT', 'German', 'Programming');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('3', 'HT', 'English', 'Programming');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('4', 'BP', 'English', 'Crime');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('5', 'LS', 'Dutch', 'Sci-fi');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('6', 'HF', 'Japanese', 'Fantasy');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('7', 'GT', 'English', 'Fiction');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('8', 'BT', 'Polish', 'Fantasy');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('9', 'KP', 'German', 'Programming');
+INSERT INTO `lib`.`book_det` (`pub_id`, `pub_name`, `lang`, `genre`) VALUES ('10', 'Spring', 'English', 'Programming');
+
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`) VALUES ('1', 'Jaby', 'P','2006-9-7');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('2', 'jack', 'T', '2004-1-3');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('3', 'Ricky', 'P', '2003-4-5');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('4', 'Andrea', 'T', '2005-6-7');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('5', 'Alex', 'P', '2013-5-3');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('6', 'Kalp', 'T', '2004-8-7');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('7', 'Sam', 'T', '2009-8-7');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('8', 'Vick', 'P', '2019-2-3');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('9', 'Vinod', 'T', '2005-8-7');
+INSERT INTO `lib`.`members` (`mem_id`, `mem_name`, `mem_type`, `m_date`) VALUES ('10', 'Vipul', 'P', '2006-9-7');
